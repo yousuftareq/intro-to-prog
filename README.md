@@ -15,7 +15,7 @@ cout << "\nYour age is: \n" << age;
 cout << "\n Your address is: \n" << address;
 }
   
-  // enter name, age and address
+  // enter name, age and address //
   
 #include <iostream>
 #include <string>
@@ -31,4 +31,29 @@ cout << "The area of the circle is: \n " << a << endl;
 cout << "The circumference of the circle is: \n " << c << endl;
 }
   
-  // calculate of the radius
+  // calculate of the radius //
+  
+  #include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	double length, width, rect, tri, sq;
+	cout << "\n calculating the area of Rectangle, Triangle and Square shapes\n";
+	cout << "enter the length:\n";
+	cin >> length;
+	cout << "/n enter the width : \n";
+	cin >> width;
+
+	rect = length * width;
+	tri = (length * width) * 0.5;
+	sq = length * length;
+	cout << "\nThe area of rectangle : \n" << rect;
+	cout << "\nThe area of triangle: \n" << tri;
+	cout << "\nThe area of square: \n" << sq;
+}
+  
+  // calculating the area of Rectangle, Triangle and Square
+  
+  
