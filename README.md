@@ -109,3 +109,33 @@ bool checkEvenOdd(int num) {
 }
 	
 	// Check whether it's even or odd //
+
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Enter the number to see whether its positive, negative or zero\n";
+    double number;
+    cin >> number;
+    if (number == 0)
+    {
+        cout << "The number you entered is zero";
+    }
+
+    else  if (number > 0)
+    {
+        cout << "The number you entered is positive";
+    }
+    else  if (number < 0)
+    {
+        cout << "The number you entered is negative";
+    }
+    else
+    {
+        cout << "Incorrect input";
+    }
+}
+		
+		// To see whether its positive, negative or zero //
