@@ -54,6 +54,30 @@ int main()
 	cout << "\nThe area of square: \n" << sq;
 }
   
-  // calculating the area of Rectangle, Triangle and Square
+  // calculating the area of Rectangle, Triangle and Square //
   
   
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Kindly enter your age to see whether you can vote or not!\n";
+    int age;
+    cin >> age;
+    if (age >= 18)
+    {
+        cout << "You can vote";
+
+    }
+    else
+    {
+        cout << "Sorry not today";
+    }
+
+}
+	
+  // whether or not they are eligible to vote //
+	
+
+
