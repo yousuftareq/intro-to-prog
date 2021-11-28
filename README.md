@@ -80,4 +80,32 @@ int main()
   // whether or not they are eligible to vote //
 	
 
+#include <iostream>
+using namespace std;
+bool checkEvenOdd(int num);
 
+int main() {
+    int num;
+    bool isEven;
+    cout << "Enter any number: ";
+    cin >> num;
+    isEven = checkEvenOdd(num);
+    if (isEven)
+        cout << num << " is an even number";
+    else
+        cout << num << " is an odd number";
+
+    return 0;
+}
+
+bool checkEvenOdd(int num) {
+    bool b;
+    if (num % 2 == 0)
+        b = true;
+    else
+        b = false;
+
+    return b;
+}
+	
+	// Check whether it's even or odd //
