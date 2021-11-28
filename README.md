@@ -139,3 +139,35 @@ int main()
 }
 		
 		// To see whether its positive, negative or zero //
+
+		
+#include<iostream>
+using namespace std;
+int main()
+{
+	double Purchase, sale, x;
+	cout << "Enter the purchase price: \n";
+	cin >> Purchase;
+	cout << "\nEnter the sale price: ";
+	cin >> sale;
+	x = sale - Purchase; 
+	if (x > 0) 
+	{
+		cout << "You have a Profit of " << x << endl;
+	}
+	else if (x < 0) // For loss
+	{
+		cout << "You had a Loss of " << x << endl;
+	}
+	else if(x==0)
+	{
+		cout << "No loss no profit." << endl;
+	}
+	else
+	{
+		cout << "Incorrect input";
+	}
+	return 0;
+}
+			
+		// Whether profit or loss //	
