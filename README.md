@@ -283,8 +283,23 @@ int main()
 	}
 	cout << "t to avail transportation" << endl;
 	cout << "if nothen type n and if yes then type n" << endl;
-	char confirm;
-	cin >> confirm;
-	if ( confirm )
+	char check;
+	cin >> check;
+	if ( check )
+	{
+		switch (check)
+		{
+		case "A":
+		case "b":
+			cout << "transportation has been booked" << endl;
+			break;
+		case "O":
+		case "p":
+			cout << "transportation has been cancelled" << endl;
+			break;
+		default:
+			cout << "invalid error" << endly;
+			break;
+		}
 	
-	// CODING test //
+	// coding test //
