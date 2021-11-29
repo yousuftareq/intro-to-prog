@@ -281,6 +281,10 @@ int main()
 		cout << "invalid loaction" << endl;
 		break;
 	}
+	cout << "t to avail transportation" << endl;
+	cout << "if nothen type n and if yes then type n" << endl;
+	char confirm;
+	cin >> confirm;
+	if ( confirm )
 	
-	
-	// CODE TEST //
+	// CODING test //
