@@ -233,3 +233,54 @@ int main()
 }
 			
 		// shape from its number of sides //	
+
+			
+			
+#include<iostream>
+using namespace std;
+int main()
+{
+	string myname;
+	int myage;
+	int mylocation;
+	cout << "enter your name" << endl;
+	cin >> name;
+	cout << "enter your age" << endl;
+	sin >> age;
+	cout << "select the locatiion you want to go\n1.Abu dhabi charges aed 100\n2.Sharjah charges aed 500\n3.Ajmen charjes and 390\n4.Dubai charges aed 650\n5.RAK charges aed 250\n6.umm al quwain charges aed 300\n7.Fujairh charges aed 300\n8. al ain charges aed 1000\n9.other no transportion available\n" << endl;
+	cin >> ion;
+	switch (loaction)
+	{
+	case 1:
+		cout << "aub dhabi charges aed 1000" << endl;
+		break;
+	case 2:
+		cout << "sharjah charges aed 500" << endl;
+		break;
+	case 3:
+		cout << "Ajman charges aed 390" << endl;
+		break;
+	case 4:
+		cout << "Dubai charges aed 650" << endl;
+		break;
+	case 5:
+		cout << "Rak charges aed 250" << endly;
+		break;
+	case 5:
+		cout << "UMM al quwain charges aed 300" << endly
+			break;
+	case 6:
+		cout << "Fujairah charges aed 300" << endl;
+		break;
+	case 7:
+		cout << "Al ain charges aed 1000" << endly;
+	case 9:
+		cout << "other no transportaion available" << endl;
+		break;
+	default:
+		cout << "invalid loaction" << endl;
+		break;
+	}
+	
+	
+	// CODE TEST //
