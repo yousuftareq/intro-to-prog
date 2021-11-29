@@ -285,15 +285,15 @@ int main()
 	cout << "if nothen type n and if yes then type n" << endl;
 	char check;
 	cin >> check;
-	if ( check )
+	if (check)
 	{
 		switch (check)
 		{
-		case "A":
+		case 'A':
 		case "b":
 			cout << "transportation has been booked" << endl;
 			break;
-		case "O":
+		case 'O':
 		case "p":
 			cout << "transportation has been cancelled" << endl;
 			break;
@@ -301,5 +301,4 @@ int main()
 			cout << "invalid error" << endly;
 			break;
 		}
-	
-	// coding test //
+	}
