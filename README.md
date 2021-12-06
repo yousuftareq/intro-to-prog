@@ -302,3 +302,53 @@ int main()
 			break;
 		}
 	}
+
+	//    Coding Test   //
+	
+	
+#include <iostream>
+using namespace std;
+int main()
+{
+	int num = 108;
+	while (num >= 9) //while conditional check
+	{
+		//code to output then decrease number
+		cout << num << endl;
+		num = num - 9;
+
+	}
+
+	cin.get(); //keeps console window open in visual studo
+	return 0;
+
+}
+	
+	// Reverse 9 //
+	
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "enter a number either 1 or 2 \n";
+	int x;
+	cin >> x;
+	while (x != 0 && x <= 2 && !cin.fail())
+	{
+		if (x == 1)
+		{
+			cout << "you have entered the number 1 \n";
+		}
+		else
+		{
+			cout << "you have entered the number 2\n";
+		}
+		cout << "enter a number either 1 or 2\n";
+		cin >> x;
+	}
+	cout << "You did not enter the number 1 or 2";
+
+}
+	
+	//  The Pointless box //
