@@ -352,3 +352,44 @@ int main()
 }
 	
 	//  The Pointless box //
+	
+	
+	
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int y;
+	cout << "Enter a number you want the table of: " << endl;
+	cin >> y;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(100, '\n');
+		cin >> y;
+	}
+	for (int x = 1; x <= 10; x++)
+	{
+		cout << y << " x " << x << " = " << y * x << endl;
+
+	}
+
+	{
+		cout << "Enter the number for factorial\n";
+		int x, fact = 1;
+		cin >> x;
+		for (int y = x; y > 0; y--)
+		{
+			fact = y * fact;
+		}
+		cout << "The factorial is: " << fact;
+
+		return 0;
+	}
+
+}
+	
+	// Coding test 2 ///
