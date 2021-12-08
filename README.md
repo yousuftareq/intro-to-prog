@@ -355,39 +355,4 @@ int main()
 	
 	
 	
-	#include<iostream>
-#include<math.h>
-#include<string>
-using namespace std;
-int main()
-{
-	int Num, Fact = 1, Counter = 10;
-	string Name;
-	cout << "Enter your name: ";
-	getline(cin, Name);
-	cout << "Enter a number: ";
-	cin >> Num;
-	while (cin.fail())
-	{
-		cin.clear();
-		cin.ignore(1000, '\n');
-		cout << "Invalid number\nTry again: ";
-		cin >> Num;
-	}
-	for (int i = Num; i > 0; i--)
-	{
-		Fact *= i;
-	}
-	cout << "Factorial is: " << Fact << endl;
-	do
-	{
-		cout << Num << " x " << Counter << " = " << Num * Counter << endl;
-		Counter--;
-	} while (Counter > 0);
-	for (int i = 10; i > 4; i--)
-	{
-		cout << Num << " with exponent of " << i << " = " << pow(Num, i) << endl;
-	}
-	return 0;
-}
-	// Coding test 2 ///
+
