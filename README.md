@@ -355,41 +355,39 @@ int main()
 	
 	
 	
-	
-#include <iostream>
-#include <string>
+	#include<iostream>
+#include<math.h>
+#include<string>
 using namespace std;
 int main()
 {
-	int y;
-	cout << "Enter a number you want the table of: " << endl;
-	cin >> y;
+	int Num, Fact = 1, Counter = 10;
+	string Name;
+	cout << "Enter your name: ";
+	getline(cin, Name);
+	cout << "Enter a number: ";
+	cin >> Num;
 	while (cin.fail())
 	{
-		cout << "Invalid command enter the numbers again: " << endl;
 		cin.clear();
-		cin.ignore(100, '\n');
-		cin >> y;
+		cin.ignore(1000, '\n');
+		cout << "Invalid number\nTry again: ";
+		cin >> Num;
 	}
-	for (int x = 1; x <= 10; x++)
+	for (int i = Num; i > 0; i--)
 	{
-		cout << y << " x " << x << " = " << y * x << endl;
-
+		Fact *= i;
 	}
-
+	cout << "Factorial is: " << Fact << endl;
+	do
 	{
-		cout << "Enter the number for factorial\n";
-		int x, fact = 1;
-		cin >> x;
-		for (int y = x; y > 0; y--)
-		{
-			fact = y * fact;
-		}
-		cout << "The factorial is: " << fact;
-
-		return 0;
+		cout << Num << " x " << Counter << " = " << Num * Counter << endl;
+		Counter--;
+	} while (Counter > 0);
+	for (int i = 10; i > 4; i--)
+	{
+		cout << Num << " with exponent of " << i << " = " << pow(Num, i) << endl;
 	}
-
+	return 0;
 }
-	
 	// Coding test 2 ///
