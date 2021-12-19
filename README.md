@@ -1112,3 +1112,372 @@ int main() {
 				 
 //////////  Loopy ////////////
 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+cout << " **********A program that counts up from 0 to 50 in increments of 1**********\n";
+for (int x=0; x<51; x++)
+{
+	cout << x << endl;
+}
+cout << endl;
+cout << " **********A program that counts down from 50 to 0 in decrements of 1**********\n";
+for (int x = 50; x >= 0; x--)
+{
+	cout << x << endl;
+}
+cout << endl;
+cout << " **********A program that counts up from 30 to 50 in increments of 1**********\n";
+for (int x = 30; x < 51; x++)
+{
+	cout << x << endl;
+}
+
+cout << " **********A program that counts down from 50 to 10 in decrements of 2**********\n";
+for (int x = 50; x > 11; x=x-2)
+{
+	cout << x << endl;
+}
+
+cout << " **********A program that counts up from 100 to 200 in increments of 5**********\n";
+for (int x = 100; x < 201; x = x + 5)
+{
+	cout << x << endl;
+}
+}
+			 
+////////////  Some counting ///////////
+			 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	for (int x = 20; x <= 24; x++)
+	{
+		if (x %2==0)
+			cout << x << " - even" << "\n";
+		else
+			cout << x << " - odd" << "\n";
+	}
+
+}
+						 
+///////////  Odd or Even  //////////////
+				
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	for (int x = 0; x < 4; x++)
+	{
+		string myWord = "ARSH";
+		cout << myWord.at(x) << endl;
+	}
+
+}
+					    
+////////////  Iterate through a word  ////////////
+					    
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	for (int i = 0; i < 7; i++)
+	{ 
+		for (int j = 0; j < 7; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+
+}
+	
+/////////////  Seven Stars, Seven Lines //////////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	for (int i = 1; i <= 5; i++)
+	{ 
+		for (int j = 1; j <= i; j++)
+		{
+			cout << "*";
+		}
+		cout << endl; 
+	}
+
+
+}
+	
+//////////  Descending Stars, Seven Lines /////////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	for (int i = 1; i <= 5; i++)
+	{
+		for (int j = 1; j <= i; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+
+}
+	
+/////////// Rising Stars, Five Lines /////////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	for (int i = 1; i <= 5; i++)
+	{ 
+		for (int j = 1; j <= i; j++)
+		{
+			cout << "*"; 
+		}
+		cout << endl; 
+	}
+
+
+	for (int i = 1; i <= 5; i++) {
+		for (int j = i; j <= 5; j++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+
+}
+	
+//////// Rising and Falling Stars ///////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int r;
+	cout << "Enter a number to find the cube" << endl;
+	cin >> r;
+	for (int x = 1; x <= r; x++)
+	{
+		cout << "\nNumber is " << x << " the cube is ";
+		int y = x;
+		y = y * y * y;
+		cout << y;
+	}
+
+}
+			 
+/////////// Cubes ////////////
+			 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int sum = 0;
+	
+	for (int x = 100; x <= 200; x++)
+	{
+		if (x % 9 == 0)
+		{
+			cout << "\nNumber is " << x << endl;
+					
+			sum = sum + x;
+		
+					}
+		
+		
+	}
+	cout << "The sum is " << sum << endl;
+}
+					    
+////////////  9s ////////////////
+					    
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i = 1, j = 1;
+	while (i <= 5)
+	{
+		j = 1;
+		while (j <= i)
+		{
+			cout << "*";
+			j++;
+		}
+		cout << endl;
+		i++;
+	}
+
+}
+	
+/////////  Rising Star's ////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i = 1, j = 1;
+	while (i <= 5)
+	{
+		j = i;
+		while (j <= 5)
+		{
+			cout << "*";
+			j++;
+		}
+		cout << endl;
+		i++;
+	}
+
+}
+	
+///////// Falling Star's//////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    cout << "Enter the number for factorial\n";
+    double x, fact=1;
+    cin >> x;
+    for (int y = x; y > 0; y--)
+    {
+       fact = y*fact;
+    }
+    cout << "The factorial is: " << fact;
+}
+//////////// Factorial ///////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int x=100, sum = 0;
+	do
+	{
+	
+		if (x % 9 == 0)
+		{
+			cout << "\nNumber is " << x << endl;
+
+			sum = sum + x;
+
+		}
+		x++;
+
+	} while (x <= 200);
+
+	cout << "The sum is " << sum << endl;
+}
+					    
+/////////// 9s ////////////
+					    
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int y;
+	cout << "Enter a number you want the table of: " << endl;
+	cin >> y;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> y;
+	}
+	for (int x=0; x<= 10; x++)
+	{
+		cout << y << " x " << x << " = " << y * x << endl;
+		
+	}
+
+}
+
+/////////   For Loop Table ///////////
+								 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int y, x = 0;
+	cout << "Enter a number you want the table of: " << endl;
+	cin >> y;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> y;
+	}
+	while (x <= 10)
+	{
+		cout << y << " x " << x << " = " << y * x << endl;
+		x++;
+	}
+
+}
+								 
+///////////   while loop Table //////////
+								 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int x;
+	cout << "Enter a number you want the table of:" << endl;
+	cin >> x;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
+	int y;
+	cout << "Enter a number till which number you want it to be printed example 10 etc.: " << endl;
+	cin >> y;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> y;
+	}
+	for (int z=0; z<=y; z++)
+	{
+		cout << x << " x " << z << " = " << x * z << endl;
+		
+	}
+
+}
+
+////////////// For Loop Table ////////////
+								 
+								 
