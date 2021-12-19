@@ -1705,3 +1705,126 @@ int main()
 /////////// Square and Cube root  //////////////
 	
 
+#include <iostream>
+#include <string>
+#include <array>
+#include <algorithm>
+using namespace std;
+
+void welcome();
+void bye();
+
+int main()
+{
+    welcome();
+    bye();
+    return 0;
+}
+
+
+void welcome()
+{
+    cout << "Hello there\n";
+}
+
+void bye()
+{
+    cout << "See you later\n";
+}
+	
+//////// Function 1 //////////
+	
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+string message(double num)
+{
+
+	cout << "\n\nThe rooth from 1-10 is: " << endl;
+	double y = 1;
+	do
+	{
+		cout << y << " root value for " << num << " is: ";
+		double x = 1 / y;
+		double r = pow(num, x);
+		cout << r << endl;
+		y++;
+	} while (y != 11);
+
+	return "********END OF THE CODE*******";
+}
+
+int main()
+{
+
+	int num, fact = 1;
+
+	cout << "Enter a number you want the root value from 1-10: " << endl;
+	cin >> num;
+
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> num;
+	}
+
+
+	cout << message(num) << endl;
+
+	return 0;
+
+}
+	
+//////////// Exercise function Root ////////////
+	
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+string message(double num)
+{
+
+	cout << "\n\nThe exponent from 1-10 is: " << endl;
+	double y = 1;
+	do
+	{
+		cout << y << " exponent value for " << num << " is: ";
+
+		cout << pow(num, y) << endl;
+		y++;
+	} while (y != 11);
+
+	return "********END OF THE CODE*******";
+}
+
+int main()
+{
+
+	int num, fact = 1;
+
+	cout << "Enter a number you want the exponent value from 1-10: " << endl;
+	cin >> num;
+
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> num;
+	}
+
+
+	cout << message(num) << endl;
+
+	return 0;
+
+}
+	
+/////////// Exercise function exponent value ///////////
