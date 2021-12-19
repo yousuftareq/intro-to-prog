@@ -1481,3 +1481,227 @@ int main()
 ////////////// For Loop Table ////////////
 								 
 								 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string months[12] = { "January", "February", "March","April","May","June","July","August","September","October","November","December" };
+
+    for (int i = 0; i < 12; i++)
+    {
+        cout << months[i] << endl;
+    }
+}
+				 
+////////// Months ////////////
+				 
+#include <array>
+#include <string>
+#include <algorithm>
+using namespace std;
+#include <iostream>
+
+int main()
+{
+    cout << "Hello User!\nEnter marks for five subjects";
+    int marks[5];
+    int sum = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "\nInput the subject marks" << endl;
+        cin >> marks[i];
+        while (cin.fail() || marks[i] > 100 || marks[i] < 0) {
+            cout << "invalid command, enter the marks again\n";
+            cin.clear();
+            cin.ignore();
+            cin >> marks[i];
+        }
+
+        sum = sum + marks[i];
+    }
+    cout << "\nYour average is: " << sum / 5 << endl;
+}
+	
+//////////  Marks  ////////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string snacks[5][5] = {
+		{"_","_","_","_","_"},
+	{"_", "O", "_", "O", "_"},
+	{"_", "@", "@", "@", "_"},
+	{"_", "^", "^", "^", "_"},
+	{"_", "V", "V", "V","_" }
+	};
+
+	for (int x = 0; x < 5; x++)
+	{
+		cout << endl;
+		for (int y = 0; y < 5; y++)
+			cout << snacks[x][y];
+	}
+	cout << endl;
+}
+	
+/////////// ArrayArt ///////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int courses[5];
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Input the " << i + 1 << " number" << endl;
+        cin >> courses[i];
+        while (cin.fail()) {
+            cout << "invalid command, enter the number again\n";
+            cin.clear();
+            cin.ignore();
+            cin >> courses[i];
+        }
+    }
+    cout << "the numbers are: \n";
+    for (auto course : courses) {
+        cout << course << endl;
+    }
+
+
+}
+
+///////////  Input / OutputArray /////////////
+	
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <exception>
+#include <array>
+#include <random>
+using namespace std;
+
+int main()
+{
+	int sum = 0;
+	
+	srand(7);
+	array<int, 1000> randomArry;
+	for (int i = 0; i < 1000; i++)
+	{
+
+		randomArry[i] = rand() % 50;
+		cout << randomArry[i] << ",";
+		if (randomArry[i] == 6)
+			sum++;
+	}
+	cout << "The number 6 appeared: " << sum << " times" << endl;
+}
+					
+////////////////  random numbers ////////////////
+								    
+#include <iostream>
+#include <array>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int i;
+    double x = 0, arr[10];
+    cout << "Enter total number of elements(1 to 10): \n";
+    for (i = 0; i < 10; i++)
+    {
+        cout << "Enter Number " << i + 1 << " : ";
+        cin >> arr[i];
+
+        while (cin.fail())
+        {
+            cout << "Incorrect command, kindly enter the number again ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> arr[i];
+        }
+    }
+    for (i = 0; i < 10; ++i)
+    {
+
+        if (x < arr[i])
+            x = arr[i];
+    }
+    cout << "Largest element = " << x;
+
+    return 0;
+}
+	
+//////////// Largest NO. //////////////
+	
+#include <iostream>
+#include <array>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int i;
+    double x = 0, arr[10];
+    cout << "Enter total number of elements(1 to 10): \n";
+    for (i = 0; i < 10; ++i)
+    {
+        cout << "Enter Number " << i + 1 << " : ";
+        cin >> arr[i];
+
+        while (cin.fail())
+        {
+            cout << "Incorrect command, kindly enter the number again ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cin >> arr[i];
+        }
+    }
+    x = arr[0];
+    for (i = 0; i < 10; i++)
+    {
+
+        if (x > arr[i])
+            x = arr[i];
+    }
+    cout << "Smallest element = " << x;
+
+    return 0;
+}
+	
+//////////   smallest NO. ///////////
+	
+#include <iostream>
+#include <string>
+#include <math.h>
+using namespace std;
+int main()
+{
+	cout << "Enter a number you want the square root and cube root of" << endl;
+	int x;
+	cin >> x;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> x;
+	}
+
+	cout << "The square-root of "<<x <<" is " << sqrt(x) << endl;
+	cout << "The cube-root of " << x << " is " << cbrt(x) << endl;
+	//cout << "The cube-root of "<< x << " is " << pow(x, 0.333333333333333) << endl;
+	//cout << "The square-root of "<< x << " is " << pow(x, 0.5) << endl;
+	return 0;
+}
+	
+/////////// Square and Cube root  //////////////
+	
+
