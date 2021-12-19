@@ -31,9 +31,59 @@ cout << "The area of the circle is: \n " << a << endl;
 cout << "The circumference of the circle is: \n " << c << endl;
 }
   
-  // calculate of the radius //
-  
-  #include <iostream>
+  /////   Circles  //////
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+string age, address, name;
+cout << "Enter your name: \n";
+cin >> name;
+cout << "\nEnter your age: \n";
+cin >> age;
+cout << "\n Enter your address:\n" << address;
+cin >> address;
+cout << "\nYour name is: \n" << name;
+cout << "\nYour age is: \n" << age;
+cout << "\n Your address is: \n" << address;
+}	
+	
+//////   Biography  ////////////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+double x;
+double y;
+cout << "Enter the temperature in Fahrenheit to be converted into celcius\n";
+cin >> x;
+y = (x - 32) * 0.5556;
+cout << "The temperature in Celcius is: " << y << endl;
+}
+	
+////////   Temperature  1 //////////
+	
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+double x,y;
+cout << "Enter the temperature in celcius to be converted into Fahrenheit \n";
+cin >> x;
+y = (x *1.8) +32;
+cout << "The temperature in Fahrenheit is: " << y << endl;
+}
+	
+	
+//////  Temperature 2 //////////
+	
+
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -54,7 +104,7 @@ int main()
 	cout << "\nThe area of square: \n" << sq;
 }
   
-  // calculating the area of Rectangle, Triangle and Square //
+  // calculating the area of Rectangle, Triangle and Square ///////////
   
   
 #include <iostream>
@@ -72,12 +122,12 @@ int main()
     }
     else
     {
-        cout << "Sorry not today";
+        cout << "Sorry later";
     }
 
 }
 	
-  // whether or not they are eligible to vote //
+  // whether or not they are eligible to vote //////////
 	
 
 #include <iostream>
@@ -108,7 +158,7 @@ bool checkEvenOdd(int num) {
     return b;
 }
 	
-	// Check whether it's even or odd //
+          /////// Check whether it's even or odd ///////
 
 	
 #include <iostream>
@@ -138,7 +188,7 @@ int main()
     }
 }
 		
-		// To see whether its positive, negative or zero //
+	////////// To see whether its positive, negative or zero /////////////
 
 		
 #include<iostream>
@@ -170,7 +220,7 @@ int main()
 	return 0;
 }
 			
-		// Whether profit or loss //	
+	///////////// Whether profit or loss ////////////////	
 
 		
 #include<iostream>
@@ -232,9 +282,39 @@ int main()
 	return 0;
 }
 			
-		// shape from its number of sides //	
-
+	////////// shape from its number of sides /////////////	
 			
+		
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout << "Enter the time in 24 hour pattern to see whether it Morning, Afternoon, Evening or Night\n";
+	double time;
+	cin >> time;
+	if (time < 12)
+	{
+		cout << "Good Morning";
+	}
+	else if (time >= 12 && time < 18)
+	{
+		cout << "Good Afternoon";
+		}
+	else if (time >=18 && time < 21)
+	{
+		cout << "Good Evening";
+	}
+	else if (time >=21 && time <24)
+	{
+		cout << "Good Night";
+	}
+	else
+	{
+		cout << "wrong input";
+	}
+}
+
+/////////// Good Morning ////////////			
 			
 #include<iostream>
 using namespace std;
@@ -303,7 +383,597 @@ int main()
 		}
 	}
 
-	//    Coding Test   //
+/////////////    Coding Test   ///////////
+	
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "What is the capital of France?\n";
+    string capital;
+    cin >> capital;
+   
+    if (capital == "Paris" || capital == "paris" || capital == "PARIS")
+    {
+        cout << "You enter the correct answer";
+    }
+    else 
+    {
+        cout << "Sorry wrong answer";
+    }
+    
+    return 0;
+}
+	
+	/////////  What is the capital of France ///////
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Enter a letter to see whether its a vowel or consonant\n";
+	char c;
+	cin >> c;
+	//isalpha is a built in function to check for alphabet values in c++
+	if (!isalpha(c))
+	{
+		cout << "you entered an incorrect value";
+	}
+	else if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+	{
+		cout << "you entered a vowel";
+
+	}
+
+
+	else
+	{
+		cout << "you entered a consonant";
+	}
+}
+	
+//////// Letter Checker //////////
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	char l;
+	int count1, count2; // variable for isalpha
+	
+	cout << "Enter a letter to check whether its a vowel or a consonant: ";
+	cin >> l;
+	if (l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u'|| l == 'A' || l == 'E' || l == 'I' || l == 'O' || l == 'U') // Checking if the entered character is a vowel
+	{
+		cout << "The input is a vowel." << endl;
+	}
+	count1 = isalpha(char(l)); // Using isalpha built-in function for alphabets
+	count2 = isdigit(char(l)); // Using isdigit built-in function for digits
+	if (count1 == 0 && count2 != 4) // Checking if the entered character is a special character, converting the special character into their ASCII code
+	{
+		cout << "The input is a special character." << endl;
+	}
+	else if (count1 != 2 && count2 == 4) // Checking if the entered character is a digit
+	{
+		cout << "The input is a digit." << endl;
+	}
+	else if (count1 != 0 && count2 != 4 && l != 'a' && l != 'e' && l != 'i' && l != 'o' && l != 'u' && l != 'A' && l != 'E' && l != 'I' && l != 'O' && l != 'U') // Checking if the entered character is a consonant
+	{
+		cout << "The input is a consonant." << endl;
+	}
+	else
+	{
+		cout << "The input is incorrect.";
+			}
+	return 0;
+}
+	
+////////// Letter Checker 2 ///////////
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   cout << "Enter the marks from 1-100 to see the grade, 0 input is not accepted\n";
+   double m;
+   cin >> m;
+   if (m>70)
+   {
+  cout << "You have a A Grade";
+   }
+   else if (m >= 60 && m < 70)
+   {
+  cout << "You have a B Grade";
+   }
+   else if (m >= 50 && m < 60)
+   {
+  cout << "You have a C Grade";
+   }
+   else if (m>40 && m<50)
+   {
+  cout << "You have a D Grade";
+   }
+   else if (m == 40 )
+   {
+  cout << "You have a JUST PASSED Grade";
+   }
+   else if(m<40 && m!=0)
+   {
+  cout << "You have a Fail Grade";
+   }
+   else 
+   {
+  cout << "Wrong input";
+   }
+}
+	
+////////// Mark my Words ///////////
+	
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	bool musician;
+	string reply;
+	string instrument;
+	cout << "Do you play any musical instrument? \n type 'y' for yes \n and 'n' for no \n ";
+	cin >> reply;
+	if (reply == "y" || reply == "Y")
+	{
+		musician = true;
+		if (musician == true)
+		{
+			cout << "What kind of insturment you can play \n type d if you're a drummer \n type g if you're a guitarist\n type o for other\n" << endl;
+			cin >> instrument;
+			if (instrument == "g" || instrument == "G")
+			{
+				cout << "That's great! I really needed a guitarist." << endl;
+			}
+			else if (instrument == "d" || instrument == "D")
+			{
+				cout << "That's great! I really needed a drummer." << endl;
+			}
+			else if(instrument =="o" || instrument == "O")
+			{
+				cout << "Ah I see, actually I'm looking for guitarist or a drummer.\n Let me know if you someone who plays them\n Thank you :)" << endl;
+			}
+			else
+			{
+				cout << "Incorrect input" << endl;
+			}
+
+		}
+	}
+		else if (reply == "N" || reply == "n")
+		{
+			musician = false;
+			cout << "Oh! so you don't know how to play any instrument\n it's alright, let me know if you know someone who does \n Thanks" << endl;
+		}
+		else
+		{
+
+			cout << "Incorrect input" << endl;
+		}
+
+	
+		return 0;
+	}
+	
+	
+/////////////   Starting a Band //////////
+	
+#include<iostream>
+using namespace std;
+int main()
+{
+	int t, m;
+	cout << "Until what time your friend will come? (Enter the time in minutes)\n";
+	cin >> t;
+	if (t >= 15)
+	{
+		cout << "Your friend will take more or equal to 15 minutes to come,\n enter the money amount to see if you can drink something";
+		cin >> m;
+		if (m > 5)
+		{
+			cout << "You have more than 5 AED, now you will buy a drink and wait for him" << endl;
+		}
+		else
+		{
+			cout << "You don't have enough money,\n Let's just walk around";
+		}
+	}
+	else
+	{
+		cout << "Your friend will be here within 15 minutes, \n so you're just going to wait for him." << endl;
+	}
+	return 0;
+}
+
+/////////  KillingTime  ////////////
+	
+#include<iostream>
+using namespace std;
+int main()
+{
+	double mag;
+	cout << "please enter the mangitude of the earthquake in numbers 0 input is not accepted : ";
+	cin >> mag;
+
+	
+
+		if (mag < 2.0 && mag >0) {
+			cout << " earthquake is considered to be a micro earthquake.";
+		}
+		else if (mag >= 2.0 && mag < 3)
+		{
+			cout << mag << " earthquake is considered to be a very minor earthquake.";
+		}
+		else if (mag >= 3.0 && mag < 4)
+		{
+			cout << mag << " earthquake is considered to be a minor earthquake.";
+		}
+		else if (mag >= 4.0 && mag < 5.0)
+		{
+			cout << mag << " earthquake is considered to be a light earthquake.";
+		}
+		else if (mag >= 5.0 && mag < 6.0)
+		{
+			cout << mag << " earthquake is considered to be a moderate earthquake." << endl;
+		}
+		else if (mag >= 6.0 && mag < 7)
+		{
+			cout << mag << " earthquake is considered to be a strong earthquake." << endl;
+		}
+		else if (mag >= 7.0 && mag < 8)
+		{
+			cout << mag << " earthquake is considered to be a major earthquake." << endl;
+		}
+		else if (mag >= 8.0 && mag <= 10)
+		{
+			cout << mag << " earthquake is considered to be a great earthquake." << endl;
+		}
+		else if (mag > 10.0)
+		{
+			cout << mag << " earthquake is considered to be a meteoric earthquake." << endl;
+		}
+	
+		else {
+			cout << "You entered an invalid value" << endl;
+		}
+		return 0;
+		}
+	
+///////////   Earthquake /////////////
+	
+#include <iostream>
+using namespace std;
+int main()
+{
+
+	cout << "Kindly select the option number for the month you want to see the days of:\n";
+
+	cout << " 1. January\n 2. February\n 3. March\n 4. April\n 5. May \n 6. June \n 7. July \n 8. August\n 9. September\n 10. October\n 11. November\n 12. December\n";
+	int a;
+	cin >> a;
+
+
+	switch (a)
+	{
+	case 1:
+	{
+		cout << "The month of January have  days 31";
+		break;
+	}
+	case 2:
+	{
+		cout << "The month of February have  days 28 if there is a leap year than 29";
+		break;
+	}
+	case 3:
+	{
+		cout << "The month of March have  days 31";
+		break;
+	}
+	case 4:
+	{
+		cout << "The month of April have  days 30";
+		break;
+	}
+	case 5:
+	{
+		cout << "The month of May have  days 31";
+		break;
+	}
+	case 6:
+	{
+		cout << "The month of June have  days 30";
+		break;
+	}
+	case 7:
+	{
+		cout << "The month of July have  days 31";
+		break;
+	}
+	case 8:
+	{
+		cout << "The month of August have  days 31";
+		break;
+	}
+	case 9:
+	{
+		cout << "The month of September have  days 30 ";
+		break;
+	}
+	case 10:
+	{
+		cout << "The month of October have  days 31";
+		break;
+	}
+	case 11:
+	{
+		cout << "The month of November have  days 30";
+		break;
+	}
+	case 12:
+	{
+		cout << "The month of December have  days 31";
+		break;
+	}
+
+	default:
+	{
+		cout << "Invalid Input" << endl;
+		break;
+	}
+	}
+
+}
+	
+/////////////  Days of the Month ///////////////////
+	
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "Kindly enter how many litres you want to fill up your car\n";
+    int lit;
+    cin >> lit;
+    if (lit != 0)
+    {
+        cout << "You have selected " << lit << " litres\n";
+        cout << "Kindly select the fuel type you want for your car\n";
+        cout << "Enter 'p' for Petrol\n 'd' for Diesel\n";
+        char fuel;
+        cin >> fuel;
+        switch (fuel)
+        {
+        case 'P':
+        case 'p':
+        {
+
+            cout << "You have selected Petrol for filling up your car\n "; 
+            int c;
+            c = lit * 0.8;
+            cout << "\nThe price per litres is 0.8 now the total is " << c;
+            break;
+        }
+        case 'd':
+        case 'D':
+        {
+            cout << "You have selected Diesel for filling up your car ";
+            int c;
+            c = lit * 0.5;
+            cout << "\nThe price per litres is 0.5 now the total is " << c;
+            break;
+
+            break;
+        }
+
+        default:
+        {
+            cout << "Incorrect command"; break;
+        }
+        }
+    }
+    else
+    {
+        cout << "Incorrect command\n ";
+    }
+    
+
+}
+	
+///////////  Fuel me up /////////////
+	
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+	cout << "Kindly select what type of temperature conversion you're interested in" << endl;
+	cout << "Type 'c' for conversion from celcius into fahrenheit" << endl;
+	cout << "Type 'f' for conversion from fahrenheit into celcius" << endl;
+	
+	char select;
+	int temp;
+	cin >> select;
+	switch (select)
+	{
+		case 'c':
+		case 'C':
+
+	{
+		cout << "\nKindly enter the temperature in celcius to be converted into fahrenheit\n";
+		cin >> temp;
+		temp = (temp * 1.8) +32;
+		cout << "\n The temperature after converison is " << temp;
+		break;
+	}
+		case 'f':
+		case 'F':
+		{
+			cout << "\nKindly enter the temperature in fahrenheit to be converted into celcius\n";
+			cin >> temp;
+			temp = (temp - 32) * 0.5556;
+			cout << "\n The temperature after converison is " << temp;
+			break;
+		}
+		
+		default:
+	{
+		cout << "Incorrect command";
+		break;
+	}
+
+	}
+
+	
+	cin.get(); //keeps console window open in Visual Studio
+	return 0;
+}
+	
+/////////// Switching Temperature //////////////
+	
+#include <iostream>
+#include <exception>
+#include <string>
+
+using namespace std;
+int main()
+{
+
+
+    
+
+    cout << "Enter your full name" << endl;
+    string name;
+  // cin cannot read spaces, that is why we can use the getline code to read the input untill the next line
+    getline(cin, name);
+    
+
+    cout << "\nEnter The Marks Between 0 To 100 to check your grade:";
+
+    cout << "\nEnter The Mark: ";
+    int marks;
+
+    std::cin >> marks;
+    //Using the cin.fail function (when user enters alphabet instead of numbers)
+    if (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Incorrect command\n: ";
+    }
+
+    else if (marks > 100)
+
+    {
+
+        /* Marks greater than 100 */
+
+        cout << "\nKindly input your Marks Between Limit\n";
+    }
+
+    else
+
+    {
+
+        switch (marks / 10)
+
+        {
+
+        case 10:
+
+        case 9:
+        case 8:
+
+        {
+            /* Marks between 80-100 */
+
+
+            cout << name <<" Your Grade Is: A Excellent";
+
+
+            break;
+        }
+        case 7:
+
+        {    /* Marks between 70-79 */
+
+
+            cout << name << " Your Grade Is: B Very Good";
+
+
+            break;
+        }
+        case 6:
+        {
+            /* Marks between 60-69 */
+
+
+            cout << name << " Your Grade Is: C Fair";
+
+            break;
+        }
+        case 5:
+        {
+            /* Marks between 50-59 */
+
+            cout << name << " Your Grade Is: D Need more practice";
+
+
+            break;
+        }
+        case 4:
+        {
+            /* Marks between 40-49 */
+
+
+
+            cout << name << " Your Grade Is: E Need more practice";
+
+
+
+            break;
+        }
+        default:
+        {
+            /* Marks less than 40 */
+
+
+            cout << name << " You Grade Is: F or Fail\n";
+
+
+        }
+        }
+    }
+}
+	
+/////////  Bonus Exercise: SwitchGrade Calculator ///////////////
+	
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	double myNum=20;
+	
+	while (myNum>0) {
+		myNum = myNum - 0.5;
+		cout << myNum << endl;
+	}
+	
+}
+	
+////////////  REMAIN POSITIVE /////////////
 	
 	
 #include <iostream>
@@ -324,7 +994,7 @@ int main()
 
 }
 	
-	// Reverse 9 //
+//////////////// Reverse 9 /////////////
 	
 
 #include <iostream>
@@ -351,8 +1021,94 @@ int main()
 
 }
 	
-	//  The Pointless box //
+/////////////  The Pointless box ///////////
 	
 	
+#include <iostream> 
+using namespace std; 
+int main() {
+
+char input;  
+do {
+	cout << "Would you like to Quit (Y/N)?" << endl;
+	cin >> input;
 	
+} 
+while ((input != 'Y') && (input != 'y') );
+
+return 0;
+}
+	
+////////////  Input improvement ///////////////////
+	
+#include <iostream>
+using namespace std;
+int main()
+{
+	string password = "246"; 
+	string userInput;
+	
+
+
+	while (userInput != password)
+	{
+		cout << "Enter the pass code for the safe" << endl;
+		cin >> userInput;
+
+	}
+	//to print the ran out of message only if the password was not found within 5 attempts
+	cout << "You found the code";
+}
+	
+//////////// Brute-Force Attack //////////////
+	
+#include <iostream>
+using namespace std;
+int main()
+{
+	string password = "246";
+	string userInput;
+	int x = 5;
+	cout << "You will only have 5 attempts" << endl;
+
+
+	while (x > 0)
+	{
+		cout << "Enter the pass code for the safe" << endl;
+		cin >> userInput;
+		if (userInput == password)
+		{
+			cout << "You have finally unlocked the safe" << endl;
+
+			break;
+		}
+		else
+			x--;
+	}
+	//to print the ran out of message only if the password was not found within 5 attempts
+	if (x == 0)
+	{
+		cout << "You ran out of attempts" << endl;
+	}
+}
+	
+////////////  Brute-Force Attack II /////////////////
+
+#include <iostream>  
+using namespace std; 
+int main() {
+
+	int myInt = 0, counter;
+	cout << "Enter a number\n";
+	cin >> counter;
+	do
+	{
+		cout << myInt << endl;
+		myInt++;
+
+	} while (myInt<=counter);
+
+}
+				 
+//////////  Loopy ////////////
 
