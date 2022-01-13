@@ -1828,3 +1828,121 @@ int main()
 }
 	
 /////////// Exercise function exponent value ///////////
+
+	
+	
+#include<iostream>
+#include<iomanip>
+using namespace std;
+void CoffeeMenu();
+void TeaMenu();
+int main()
+{
+    int Option, Amount, ReadyMoney = 0;
+    char Answer;
+    string Sugar;
+    cout << "What drink you are thinking to drink today?\n1. Coffee\n2. Tea\n=> ";
+    cin >> Option;
+    while (cin.fail() || (Option != 1 && Option != 2))
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "kindly try again to help better, please.\nOnly 1 or 2: ";
+        cin >> Option;
+    }
+    if (Option == 1)
+    {
+        CoffeeMenu();
+    }
+    else
+    {
+        TeaMenu();
+    }
+    cout << "Enter 'I' for Ice, 'M' for Milk, and 'B' for Black: ";
+    cin >> Answer;
+    while (cin.fail() || (Answer != 'I' && Answer != 'M' && Answer != 'B' && Answer != 'i' && Answer != 'm' && Answer != 'b'))
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "kindly try again to help better, please.\nOnly I, M, or B: ";
+        cin >> Answer;
+    }
+    cout << "Kindly enter the amount over here please: ";
+    cin >> Amount;
+    while (cin.fail() || Amount < 1)
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "kindly try again to help better, please.\nTry again: ";
+        cin >> Amount;
+    }
+    ReadyMoney = Amount;
+    switch (Answer)
+    {
+    case 'i':
+    case 'I':
+    {
+        Amount -= 3;
+        break;
+    }
+    case 'm':
+    case 'M':
+    {
+        Amount -= 2;
+        break;
+    }
+    case 'b':
+    case 'B':
+    {
+        Amount -= 1;
+        break;
+    }
+    default:
+    {
+        break;
+    }
+    }
+    if (Amount >= 0)
+    {
+        cout << "Do you like to add some sugar to the drink that you will drink? (Yes/No): ";
+        cin >> Sugar;
+        do
+        {
+            for (int i = 0; i < Sugar.length(); i++)
+            {
+                Sugar[i] = tolower(Sugar[i]);
+            }
+            while (Sugar != "yes" && Sugar != "no")
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "kindly try again to help better, please.\nTry again: ";
+                cin >> Sugar;
+            }
+        } while (Sugar != "yes" && Sugar != "no");
+        cout << "Here's your change of your drink for the drink that you prefer for your Goodtoday: " << Amount << " DHS" << endl;
+    }
+    else
+    {
+        cout << "Sorry seem that you don't have enough money\nHere's your money: " << ReadyMoney << " DHS" << endl;
+    }
+    return 0;
+}
+void CoffeeMenu()
+{
+    string Coffee[6] = { "Ice Coffee","3 DHS","Milk Coffee","2 DHS","Black Coffee","1 DHS" };
+    for (int i = 0; i < 6; i += 2)
+    {
+        cout << setw(5) << Coffee[i] << setw(9) << Coffee[i + 1] << endl;
+    }
+}
+void TeaMenu()
+{
+    string Tea[6] = { "Ice Tea","3 DHS","Milk Tea","2 DHS","Black Tea","1 DHS" };
+    for (int i = 0; i < 6; i += 2)
+    {
+        cout << setw(5) << Tea[i] << setw(9) << Tea[i + 1] << endl;
+    }
+}
+	
+//////////////////  S3 Final Submission Code ////////////////////
